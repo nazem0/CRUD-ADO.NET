@@ -5,6 +5,7 @@ public class Program
     public static void ShowOptions()
     {
         Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("0- Insert Student");
         Console.WriteLine("1- Show All Students");
         Console.WriteLine("2- Get Student By ID");
         Console.WriteLine("3- Update Student");
@@ -25,6 +26,12 @@ public class Program
         
         switch (Option)
         {
+            case 0:
+                {
+                    StudentOperations.Insert();
+                    ShowOptions();
+                    break;
+                }
             case 1:
                 {
                     StudentOperations.Show();
